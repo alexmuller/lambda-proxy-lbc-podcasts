@@ -37,4 +37,6 @@ def handler(event, context):
     s3.upload_file(temporary_file, bucket_name, key)
     s3.put_object_acl(ACL='public-read', Bucket=bucket_name, Key=key)
 
-    return 'LBC podcasts updated successfully'
+    print('LBC podcasts updated successfully')
+
+    return True
